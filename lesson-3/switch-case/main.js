@@ -3,12 +3,15 @@ console.log(numOrStr); //typeof is always a string, so the number is not a numbe
 
 switch (true) {
   case numOrStr === null:
-    console.log("Cancelled the entry");
+    console.log("ви скасували");
     break;
-  case numOrStr === "":
-    console.log("Prompt is empty");
+  case numOrStr.trim() === "":
+    console.log("Empty String");
+    break;
+  case isNaN(+numOrStr):
+    console.log(" number is Ba_NaN");
     break;
   case numOrStr:
-    console.log(numOrStr);
+    console.log("OK!");
     break;
 }
